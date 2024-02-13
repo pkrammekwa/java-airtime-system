@@ -10,14 +10,18 @@ public class NetworkServiceProviderController {
 
 	
 	public int getAirtimeSold() {
-		return nsp.getAirtimes().size();
+		return nsp.getAirtimes().size() + nsp.getAirtimeSales().size();
 	}
 	
 	public double getAirtimeRevenue() {
 		double total = 0.0;
 		
-		for(Map.Entry<String, Airtime> arr : nsp.getAirtimes().entrySet()) {
-			total += arr.getValue().getAmount();
+		for(Map.Entry<String, Airtime> airtimes : nsp.getAirtimes().entrySet()) {
+			total += airtimes.getValue().getCost();
+		}
+		
+		for(Map.Entry<String, Airtime> airtimeSales : nsp.getAirtimeSales().entrySet()) {
+			total += airtimeSales.getValue().getCost();
 		}
 		
 		return total;

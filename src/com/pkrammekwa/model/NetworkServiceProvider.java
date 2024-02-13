@@ -7,6 +7,7 @@ public class NetworkServiceProvider {
 	private String name;
 	private String headquaters;
 	private Map<String, Airtime> airtimes = new HashMap<>();
+	private Map<String, Airtime> airtimeSales = new HashMap<>();
 	
 	public static NetworkServiceProvider nsp_instance = null;
 	
@@ -47,5 +48,8 @@ public class NetworkServiceProvider {
 		airtimes.put(id, airtime);
 	}
 	
+	public Map<String, Airtime> getAirtimeSales (){
+		return airtimeSales;
+	}
 
 }

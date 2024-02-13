@@ -4,22 +4,28 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Airtime{
+public class Airtime extends Bundle{
 	
 	private long voucher;
 	private String date = "";
 	private SimpleDateFormat sdf = new SimpleDateFormat("DD/MM/YYYY h:mm:ss a");
-	private double amount;
 	private boolean used;
 	private String user;
 	private String expiryDate;
 	Calendar calendar = Calendar.getInstance();
 	
-	
-	public Airtime(long voucher, double amount, String user) {
+	/**
+	 * Instantiate airtime
+	 * @param voucher
+	 * @param amount
+	 * @param user
+	 * @param airtimeName
+	 * @param value
+	 */
+	public Airtime(long voucher, double amount, String user, String airtimeName, double value) {
+		super(amount, airtimeName, value);
 		calendar.add(calendar.DAY_OF_MONTH, 1);  //add one day 
 		this.voucher = voucher;
-		this.amount = amount;
 		this.user = user;
 		date = sdf.format(new Date().getTime());
 		used = false;
@@ -41,14 +47,6 @@ public class Airtime{
 
 	public void setDate(String date) {
 		this.date = date;
-	}
-
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(double amount) {
-		this.amount = amount;
 	}
 	
 	public boolean isUsed() {
@@ -78,7 +76,7 @@ public class Airtime{
 	public String toString() {
 		return 	
 				 "\nVoucher: "+voucher
-				+"\nAmount: "+amount
+				+"\nAmount: "+super.getCost()
 				+"\nUsed: "+used
 				+"\nUser: "+user
 				+"\nExpiry Date: "+expiryDate
