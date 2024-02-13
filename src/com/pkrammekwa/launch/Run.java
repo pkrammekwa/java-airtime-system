@@ -30,18 +30,18 @@ public class Run {
 			String airtimeInput = sc.nextLine();
 			
 			switch(airtimeInput){
-			case "1":
-				nspv.viewMenu(user, ac);
-				break;
-			case "2":
-				av.AirtimeMenu(user, sc, ac);
-				break;
-			case "3":
-				System.out.println("Thank you. Goodbye!");
-				option = true;
-				break;
-			default:
-				System.out.println("Incorrect Input!");
+				case "1":
+					nspv.viewMenu(user, ac);
+					break;
+				case "2":
+					av.AirtimeMenu(user, sc, ac);
+					break;
+				case "3":
+					System.out.println("Thank you. Goodbye!");
+					option = true;
+					break;
+				default:
+					System.out.println("Incorrect Input!");
 			}
 		}
 	}

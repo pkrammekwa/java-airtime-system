@@ -44,8 +44,6 @@ public class AirtimeView {
 				ArrayList<Airtime> arr = new ArrayList<Airtime>(nsp.getAirtimeSales().size());
 				arr.addAll(nsp.getAirtimeSales().values());
 				
-				System. out. print("\033[H\033[2J");
-				System. out. flush();
 				while(!backSales) {
 					int i = 0;
 					System.out.print(
@@ -59,6 +57,7 @@ public class AirtimeView {
 						i++;
 						System.out.println(i+". (R "+airtime.getValue().getValue()+") "+airtime.getValue().getName()+" for only R "+airtime.getValue().getCost());
 					}
+					
 					System.out.println("\n99. Back\n\nEnter option (number): ");
 					
 					String salesInput = sc.nextLine();

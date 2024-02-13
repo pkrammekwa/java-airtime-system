@@ -31,6 +31,7 @@ public class DataController implements ISales{
 		
 		//check if money is enough, if so, buy.
 		if(user.getMoney() >= data.getCost()) {
+			//buy
 			user.setData(user.getData()+data.getCost());
 			//deduct money
 			user.setMoney(user.getMoney() - data.getCost());

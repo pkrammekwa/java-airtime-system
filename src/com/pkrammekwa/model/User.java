@@ -1,5 +1,9 @@
 package com.pkrammekwa.model;
 
+
+/**
+ * This is not interaction sake, not user controller
+ */
 public class User {
 	private String name = "";
 	private double airtime = 0.0;
