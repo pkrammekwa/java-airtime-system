@@ -123,7 +123,7 @@ public class AirtimeController implements ISales{
 			//deduct money
 			user.setMoney(user.getMoney() - airtime.getCost());
 			
-			return "Success: Airtime successfully bought!";
+			return "Success: R "+airtime.getValue()+" Airtime successfully bought! New Balance: R"+user.getAirtime();
 		}
 		
 		//return results

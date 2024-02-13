@@ -17,6 +17,7 @@ public class NetworkServiceProviderView {
 		AirtimeView av = new AirtimeView();
 		
 		while(!terminate) {
+			System.out.flush();
 			System.out.print(
 					"========================\n"+
 					"network services dashboard\n"+

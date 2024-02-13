@@ -7,7 +7,13 @@ An airtime system where you can buy, recharge and verify airtime. Includes quick
 # Airtime
 - Buy
 - Verify
-- Recharge
+- Recharge 
 
 # Stats
 - View airtime stats
+
+# version
+v.0.5
+ - Fixed airtime sales 
+ - Added commons class for misc operations: isNaN, it is a custom function that checks if an input is a number else print error msg
+ - Added comments
