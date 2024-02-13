@@ -3,11 +3,12 @@ package com.pkrammekwa.view;
 import java.util.Scanner;
 
 import com.pkrammekwa.controller.AirtimeController;
+import com.pkrammekwa.controller.NetworkServiceProviderController;
 import com.pkrammekwa.model.NetworkServiceProvider;
 import com.pkrammekwa.model.User;
 
 public class NetworkServiceProviderView {
-	NetworkServiceProvider nsp = NetworkServiceProvider.getInstance();
+	NetworkServiceProviderController nspc = new NetworkServiceProviderController();
 	Scanner sc = new Scanner(System.in);
 
 	
@@ -34,8 +35,8 @@ public class NetworkServiceProviderView {
 							"========================\n"+
 							"Airtime Statistics\n"+
 							"========================\n"+
-							"\nNumber of Airtimes Sold: "+nsp.getAirtimeSold()+
-							"\nAirtime revenue: R "+nsp.getAirtimeRevenue()+
+							"\nNumber of Airtimes Sold: "+nspc.getAirtimeSold()+
+							"\nAirtime revenue: R "+nspc.getAirtimeRevenue()+
 							"\n\n"
 					);
 					break;
